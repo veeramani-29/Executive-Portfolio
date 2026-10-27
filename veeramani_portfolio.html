@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veeramani A | Creative Director & Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for animations and refined aesthetics */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: #111827;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Fade-in Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays for grids */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 selection:bg-gray-200 selection:text-black font-sans relative">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-lg font-semibold tracking-tight text-gray-900">Veeramani.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="#about" class="hover:text-gray-900 transition-colors">About</a>
+                <a href="#data-projects" class="hover:text-gray-900 transition-colors">Data</a>
+                <a href="#creative" class="hover:text-gray-900 transition-colors">Creative</a>
+                <a href="#skills" class="hover:text-gray-900 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-4 space-y-4 shadow-lg absolute w-full">
+            <a href="#about" class="block text-gray-600 font-medium">About</a>
+            <a href="#data-projects" class="block text-gray-600 font-medium">Data</a>
+            <a href="#creative" class="block text-gray-600 font-medium">Creative</a>
+            <a href="#skills" class="block text-gray-600 font-medium">Skills</a>
+            <a href="#contact" class="block text-gray-600 font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 pb-12 text-center max-w-5xl mx-auto">
+        <h1 class="reveal text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-gray-900 mb-6">
+            Bridging visual <span class="text-gray-400">storytelling</span> <br class="hidden md:block">with data-driven <span class="text-gray-400">insights.</span>
+        </h1>
+        <p class="reveal delay-100 mt-6 text-xl md:text-2xl text-gray-500 max-w-3xl font-light leading-relaxed">
+            I am a Creative Manager with 16+ years of design leadership, now leveraging Business Analytics to transform complex data into actionable, strategic narratives.
+        </p>
+        <div class="reveal delay-200 mt-12 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+            <a href="#data-projects" class="px-8 py-4 bg-gray-900 text-white rounded-full font-medium text-sm hover:bg-gray-800 transition-colors duration-300">
+                Explore Analytics Work
+            </a>
+            <a href="https://www.behance.net/VEERAMANI" target="_blank" class="px-8 py-4 bg-gray-100 text-gray-900 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center">
+                <i class="fab fa-behance mr-2"></i> Creative Portfolio
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto reveal">
+            <p class="text-sm font-semibold tracking-widest uppercase text-gray-400 mb-8">About Me</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">A dual perspective on business transformation.</h2>
+                    <div class="space-y-6 text-gray-600 text-lg font-light leading-relaxed">
+                        <p>
+                            For over 16 years, I have built and led cross-functional creative teams, managing end-to-end project delivery across telecom, EdTech, and advertising sectors. At organizations like Annalect (Omnicom) and BYJU'S, my focus was on crafting visual systems and maintaining brand consistency at scale.
+                        </p>
+                        <p>
+                            Recognizing the growing intersection of design and data, I am currently completing an Executive MBA in Business Analytics and Digital Transformation at PES University. This adds a sharper commercial lens to my creative leadership, allowing me to not only design compelling campaigns but also mathematically model their business impact.
+                        </p>
+                        <p>
+                            I specialize in combining hands-on execution across the Adobe Creative Suite with advanced data engineering, time-series forecasting, and interactive dashboarding using tools like KNIME and Tableau.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-4">Core Competencies</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-gray-300 mt-1 mr-3"></i> Creative Team Leadership</li>
+                        <li class="flex items-start"><i class="fas fa-check text-gray-300 mt-1 mr-3"></i> End-to-End Video Production</li>
+                        <li class="flex items-start"><i class="fas fa-check text-gray-300 mt-1 mr-3"></i> Brand Identity Systems</li>
+                        <li class="flex items-start"><i class="fas fa-check text-gray-300 mt-1 mr-3"></i> Automated Data Pipelines (ETL)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-gray-300 mt-1 mr-3"></i> Predictive Scenario Modeling</li>
+                        <li class="flex items-start"><i class="fas fa-check text-gray-300 mt-1 mr-3"></i> Prescriptive Visual Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Projects Section -->
+    <section id="data-projects" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-sm font-semibold tracking-widest uppercase text-gray-400 mb-4 reveal">Analytical Case Studies</p>
+            <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-16 reveal">Data Projects</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Project 1 -->
+                <div class="project-card reveal rounded-2xl border border-gray-100 overflow-hidden bg-white">
+                    <div class="h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-8 relative">
+                         <!-- Abstract representation of the project -->
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#9ca3af 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <h3 class="text-3xl font-bold text-gray-400 tracking-tighter relative z-10">FP&A</h3>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Agile FP&A: Zero-Touch Data Pipelines</h3>
+                        <p class="text-gray-500 font-light mb-6 leading-relaxed">
+                            Transformed corporate finance from reactive reporting to prescriptive modeling. Built a fully automated ETL pipeline to process 100,000+ FMCG transactions, resolving "cold-start" issues with synthetic data augmentation.
+                        </p>
+                        <div class="mb-6 space-y-2 text-sm text-gray-600">
+                            <p><strong>Methodology:</strong> ARIMA Time-Series Forecasting to map non-linear retail seasonality.</p>
+                            <p><strong>Outcome:</strong> Developed a Tableau dashboard with a Goal Seek Engine, separating fixed/variable costs to calculate price elasticity impacts dynamically.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">KNIME</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Tableau</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Data Engineering</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Predictive Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal delay-100 rounded-2xl border border-gray-100 overflow-hidden bg-white">
+                    <div class="h-64 bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center p-8 relative">
+                         <!-- Abstract representation of the project -->
+                        <div class="w-full h-full flex flex-col justify-end space-y-2 opacity-30">
+                            <div class="w-3/4 h-4 bg-gray-400 rounded-sm"></div>
+                            <div class="w-1/2 h-4 bg-gray-400 rounded-sm"></div>
+                            <div class="w-5/6 h-4 bg-gray-400 rounded-sm"></div>
+                        </div>
+                        <h3 class="absolute text-3xl font-bold text-gray-500 tracking-tighter z-10">NLP</h3>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Consumer Sentiment Analysis</h3>
+                        <p class="text-gray-500 font-light mb-6 leading-relaxed">
+                            Investigated unstructured customer reviews for Amazon electronics using Natural Language Processing. Designed a scalable, no-code pipeline to extract actionable business intelligence from text.
+                        </p>
+                        <div class="mb-6 space-y-2 text-sm text-gray-600">
+                            <p><strong>Methodology:</strong> Rule-based, lexicon-driven analysis (Hu & Liu) paired with Supervised Machine Learning (Naïve Bayes, Logistic Regression).</p>
+                            <p><strong>Outcome:</strong> Bridged the gap between textual sentiment and numeric forecasting, delivering insights via interactive BI dashboards.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">KNIME</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Power BI</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">NLP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Portfolio Section -->
+    <section id="creative" class="py-32 px-6 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <p class="text-sm font-semibold tracking-widest uppercase text-gray-400 mb-4">Design & Production</p>
+                    <h2 class="text-4xl font-bold tracking-tight text-white">Creative Portfolio</h2>
+                </div>
+                <a href="https://www.behance.net/VEERAMANI" target="_blank" class="mt-6 md:mt-0 group flex items-center text-gray-300 hover:text-white transition-colors">
+                    View full portfolio on Behance <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Creative Item 1 -->
+                <div onclick="openModal('motion')" class="group reveal rounded-xl overflow-hidden bg-gray-800 border border-gray-700 aspect-square flex flex-col justify-between p-8 hover:bg-gray-750 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50 relative">
+                    <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                        <i class="fas fa-arrow-up-right-from-square text-gray-400"></i>
+                    </div>
+                    <i class="fas fa-film text-4xl text-gray-500 group-hover:text-gray-300 transition-colors mb-4"></i>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2 group-hover:text-white transition-colors">Motion Graphics & Video</h3>
+                        <p class="text-sm text-gray-400 font-light">Led production for global agency clients and delivered 23+ hours of premium educational content.</p>
+                    </div>
+                </div>
+                <!-- Creative Item 2 -->
+                <div onclick="openModal('brand')" class="group reveal delay-100 rounded-xl overflow-hidden bg-gray-800 border border-gray-700 aspect-square flex flex-col justify-between p-8 hover:bg-gray-750 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50 relative">
+                    <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                        <i class="fas fa-arrow-up-right-from-square text-gray-400"></i>
+                    </div>
+                    <i class="fas fa-pen-nib text-4xl text-gray-500 group-hover:text-gray-300 transition-colors mb-4"></i>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2 group-hover:text-white transition-colors">Brand Identity</h3>
+                        <p class="text-sm text-gray-400 font-light">Developed design directions and visual systems for Tier 1 telecom clients (Airtel, Vodafone, BSNL).</p>
+                    </div>
+                </div>
+                <!-- Creative Item 3 -->
+                <div onclick="openModal('photo')" class="group reveal delay-200 rounded-xl overflow-hidden bg-gray-800 border border-gray-700 aspect-square flex flex-col justify-between p-8 hover:bg-gray-750 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50 relative">
+                    <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                        <i class="fas fa-arrow-up-right-from-square text-gray-400"></i>
+                    </div>
+                    <i class="fas fa-camera text-4xl text-gray-500 group-hover:text-gray-300 transition-colors mb-4"></i>
+                    <div>
+                        <h3 class="text-xl font-medium mb-2 group-hover:text-white transition-colors">Photography & Layout</h3>
+                        <p class="text-sm text-gray-400 font-light">Roots in photojournalism; executing interior photography, print, and digital composition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto reveal">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-16 text-center">Technical & Creative Toolkit</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- Analytics Skills -->
+                <div class="bg-gray-50 rounded-2xl p-10 border border-gray-100">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Data & Analytics</h3>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">Tools & Platforms</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">KNIME</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Tableau</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Power BI</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Python (Basics)</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">SQL</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">Methodologies</h4>
+                            <ul class="space-y-2 text-gray-600 font-light">
+                                <li>Business Analytics & Digital Transformation</li>
+                                <li>End-to-End ETL / Data Pipeline Creation</li>
+                                <li>Time-Series Forecasting (ARIMA)</li>
+                                <li>Sentiment Analysis & NLP</li>
+                                <li>Driver-Based Financial Modeling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Skills -->
+                <div class="bg-gray-50 rounded-2xl p-10 border border-gray-100">
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Creative & Strategy</h3>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">Design Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">After Effects</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Premiere Pro</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Photoshop</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Illustrator</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">InDesign</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 shadow-sm">Figma</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">Expertise</h4>
+                            <ul class="space-y-2 text-gray-600 font-light">
+                                <li>Creative Direction & Team Management</li>
+                                <li>Visual Storytelling & Campaign Design</li>
+                                <li>Brand Identity Systems & Guidelines</li>
+                                <li>AI-Assisted Content Creation</li>
+                                <li>Production Workflow Optimisation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        <!-- Modal Content -->
+        <div class="absolute inset-x-0 bottom-0 md:inset-auto md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 bg-white md:rounded-2xl rounded-t-2xl w-full md:w-3/4 max-w-5xl md:max-h-[85vh] h-[85vh] md:h-auto overflow-hidden shadow-2xl flex flex-col transform translate-y-full md:translate-y-0 md:scale-95 transition-transform duration-300 ease-out" id="modal-panel">
+            <!-- Header -->
+            <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-10">
+                <h3 id="modal-title" class="text-2xl font-semibold text-gray-900 tracking-tight">Category Title</h3>
+                <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition-colors focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- Body -->
+            <div id="modal-body" class="p-8 overflow-y-auto bg-gray-50 flex-1">
+                <!-- Dynamic Content Goes Here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white border-t border-gray-100 py-16 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Let's connect.</h2>
+                <p class="text-gray-500 font-light">Based in Bangalore, India.</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6">
+                <a href="mailto:veera292003@yahoo.co.in" class="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mr-3">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    veera292003@yahoo.co.in
+                </a>
+                <a href="tel:+919886747598" class="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mr-3">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    +91-9886747598
+                </a>
+                <a href="https://www.behance.net/VEERAMANI" target="_blank" class="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center mr-3">
+                        <i class="fab fa-behance"></i>
+                    </div>
+                    Behance
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-16 pt-8 border-t border-gray-50 text-center text-sm text-gray-400">
+            &copy; <script>document.write(new Date().getFullYear())</script> Veeramani A. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Intersection Observer for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Navbar background change on scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-sm');
+                    navbar.classList.replace('bg-transparent', 'glass-nav');
+                } else {
+                    navbar.classList.remove('shadow-sm');
+                }
+            });
+        });
+
+        // Portfolio Modal Logic
+        const portfolioData = {
+            'motion': {
+                title: 'Motion Graphics & Video',
+                description: 'A selection of educational and promotional video content crafted for global brands. Leveraging After Effects and Premiere Pro.',
+                items: [
+                    { type: 'video', url: 'https://placehold.co/800x450/e5e7eb/6b7280?text=Educational+Video:+Chemistry', title: 'Chemistry Curriculum (BYJU\'S)' },
+                    { type: 'video', url: 'https://placehold.co/800x450/e5e7eb/6b7280?text=Promo:+Telecom+Campaign', title: 'Telecom Promo Campaign' },
+                    { type: 'video', url: 'https://placehold.co/800x450/e5e7eb/6b7280?text=Educational+Video:+UPSC', title: 'UPSC Polity Explainer' },
+                    { type: 'video', url: 'https://placehold.co/800x450/e5e7eb/6b7280?text=Social+Media+Reel', title: 'Short-Form Social Media Asset' }
+                ]
+            },
+            'brand': {
+                title: 'Brand Identity',
+                description: 'Visual systems, guidelines, and minimalist logos designed to ensure consistent brand compliance across platforms.',
+                items: [
+                    { type: 'image', url: 'https://placehold.co/800x600/f9fafb/9ca3af?text=Mozhiyaal+Logo', title: 'Mozhiyaal - Minimalist Logo' },
+                    { type: 'image', url: 'https://placehold.co/800x600/f3f4f6/6b7280?text=Brand+Guidelines', title: 'Corporate Brand Guidelines' },
+                    { type: 'image', url: 'https://placehold.co/800x600/e5e7eb/4b5563?text=Telecom+Brand+Collateral', title: 'Tier 1 Telecom Branding' },
+                    { type: 'image', url: 'https://placehold.co/800x600/f9fafb/9ca3af?text=Stationery+Mockup', title: 'Complete Stationery System' }
+                ]
+            },
+            'photo': {
+                title: 'Photography & Layout',
+                description: 'Editorial and commercial photography spanning interior spaces, food styling, and portraiture.',
+                items: [
+                    { type: 'image', url: 'https://placehold.co/800x600/e5e7eb/4b5563?text=Interior+Photography', title: 'Commercial Interior Photography' },
+                    { type: 'image', url: 'https://placehold.co/800x600/d1d5db/374151?text=Food+Styling', title: 'Culinary Photography & Styling' },
+                    { type: 'image', url: 'https://placehold.co/800x600/f3f4f6/6b7280?text=Editorial+Portrait', title: 'Editorial People Portrait' },
+                    { type: 'image', url: 'https://placehold.co/800x600/e5e7eb/4b5563?text=Press+Conference+Coverage', title: 'Photojournalism - Press Event' }
+                ]
+            }
+        };
+
+        function openModal(category) {
+            const data = portfolioData[category];
+            document.getElementById('modal-title').innerText = data.title;
+            
+            let html = `<p class="text-gray-500 font-light mb-8 text-lg">${data.description}</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6">`;
+            
+            data.items.forEach(item => {
+                const isVideo = item.type === 'video';
+                const icon = isVideo ? '<div class="absolute inset-0 flex items-center justify-center"><div class="w-16 h-16 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-900 text-xl shadow-lg transition-transform group-hover:scale-110"><i class="fas fa-play ml-1"></i></div></div>' : '';
+                
+                html += `
+                <div class="group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                    <img src="${item.url}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    ${icon}
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="text-white font-medium tracking-wide text-sm">${item.title}</h4>
+                    </div>
+                </div>`;
+            });
+            html += `</div>`;
+            
+            document.getElementById('modal-body').innerHTML = html;
+            
+            const modal = document.getElementById('portfolio-modal');
+            const panel = document.getElementById('modal-panel');
+            
+            modal.classList.remove('hidden');
+            // Trigger reflow for transition
+            void modal.offsetWidth;
+            
+            modal.classList.remove('opacity-0');
+            panel.classList.remove('translate-y-full', 'md:scale-95');
+            
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('portfolio-modal');
+            const panel = document.getElementById('modal-panel');
+            
+            modal.classList.add('opacity-0');
+            panel.classList.add('translate-y-full', 'md:scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && !document.getElementById('portfolio-modal').classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
