@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veeramani A. | Executive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#2563eb',
+                            indigo: '#4f46e5',
+                            violet: '#7c3aed',
+                        },
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --c1: #2563eb; 
+            --line: #e2e8f0; 
+            --mute: #64748b; 
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: #0f172a;
+            background-color: #ffffff;
+        }
+
+        /* Minimalist Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+
+        /* Glass Nav */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+
+        .hover-lift {
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 32px -8px rgba(37, 99, 235, 0.08);
+            border-color: #bfdbfe;
+        }
+    </style>
+</head>
+<body class="font-sans relative">
+
+    <!-- Sticky Header -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <a href="#hero" class="text-xs font-bold tracking-widest uppercase text-slate-900">Veeramani A.</a>
+            <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-widest text-slate-500 items-center">
+                <a href="#creative" class="hover:text-slate-900 transition-colors">Creative & Experience</a>
+                <a href="#business analytics" class="hover:text-slate-900 transition-colors">Business Analytics</a>
+                <a href="#finance" class="hover:text-slate-900 transition-colors">Finance</a>
+                <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+                <a href="https://www.linkedin.com/in/veeramani-a-25909663/" target="_blank" class="hover:text-brand-blue transition-colors text-sm ml-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-24 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col justify-center">
+        <div class="reveal w-full flex flex-col items-start md:items-center md:text-center text-left mt-10">
+            <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-bold tracking-tighter text-slate-900 flex items-center flex-wrap gap-3 md:justify-center">
+                Veeramani A
+                <!-- Elegant Verified Badge -->
+                <svg class="w-10 h-10 md:w-14 md:h-14 text-brand-blue mt-1 md:mt-2" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.609 1.488a.562.562 0 01.782 0l2.53 2.53c.123.123.298.175.47.143l3.52-.644a.562.562 0 01.65.65l-.644 3.52c-.032.172.02.347.143.47l2.53 2.53a.562.562 0 010 .782l-2.53 2.53c-.123.123-.175.298-.143.47l.644 3.52a.562.562 0 01-.65.65l-3.52-.644a.562.562 0 01-.47.143l-2.53 2.53a.562.562 0 01-.782 0l-2.53-2.53a.562.562 0 01-.47-.143l-3.52.644a.562.562 0 01-.65-.65l.644-3.52a.562.562 0 01-.143-.47l-2.53-2.53a.562.562 0 010-.782l2.53-2.53c.123-.123.175-.298.143-.47l-.644-3.52a.562.562 0 01.65-.65l3.52.644c.172.032.347-.02.47-.143l2.53-2.53z"/>
+                    <path fill="#ffffff" d="M10.25 15.25l-3.5-3.5 1.5-1.5 2 2 5.5-5.5 1.5 1.5-7 7z"/>
+                </svg>
+            </h1>
+            <div class="mt-6 w-full max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-light text-slate-800 leading-snug">
+                    Creative leader. Analytics executive. Market trader.
+                </h2>
+                <p class="text-lg font-light text-slate-500 mt-4 leading-relaxed max-w-3xl mx-auto">
+                    Creative Manager and BI Analyst with 18+ years of experience leading teams and delivering for enterprise clients, including Omnicom, Airtel, and Vodafone. MBA in Business Analytics and Digital Transformation, PES University.
+                </p>
+            </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="reveal delay-200 mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 w-full border-t border-slate-100 pt-10 text-center">
+            <div>
+                <p class="text-3xl font-bold text-slate-900 tracking-tighter">18+ <span class="text-xl">yrs</span></p>
+                <p class="text-xs font-medium text-slate-500 mt-1 leading-relaxed">In visual storytelling<br> and complete production management</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-slate-900 tracking-tighter">10+ <span class="text-xl">yrs</span></p>
+                <p class="text-xs font-medium text-slate-500 mt-1 leading-relaxed">In the Tier-1 telecom industry <br> client delivery</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-slate-900 tracking-tighter">23+ <span class="text-xl">hrs</span></p>
+                <p class="text-xs font-medium text-slate-500 mt-1 leading-relaxed"> Of premium educational video delivered <br> led end-to-end production </p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-slate-900 tracking-tighter">MBA</p>
+                <p class="text-xs font-medium text-slate-500 mt-1 leading-relaxed">Business Analytics <br> and Digital Transformation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: FOUR DIMENSIONS FLOW -->
+    <section class="py-24 px-6 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto reveal">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[10px] font-bold tracking-widest uppercase text-brand-blue">Core Pillars</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mt-2">Four Dimensions of an Executive</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch relative">
+                <!-- Card 1: Creative Vision -->
+                <div class="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-blue-50 text-blue-700 rounded">01</span>
+                            <i class="fas fa-palette text-brand-blue text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 tracking-tight uppercase mb-3">Creative Vision</h3>
+                        <ul class="text-[11px] text-slate-600 font-light space-y-2 border-t border-slate-100 pt-4">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>Creative Director</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>Visual Storyteller</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>Production Leader</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 py-6 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 flex flex-col items-center justify-center text-blue-400">
+                        <i class="fas fa-film text-xl mb-2"></i>
+                        <span class="text-[10px] font-bold text-brand-blue uppercase tracking-wider">Motion & Brand</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Strategic Thinking -->
+                <div class="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded">02</span>
+                            <i class="fas fa-chess-knight text-brand-indigo text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 tracking-tight uppercase mb-3">Strategic Thinking</h3>
+                        <ul class="text-[11px] text-slate-600 font-light space-y-2 border-t border-slate-100 pt-4">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-indigo"></span>MBA</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-indigo"></span>Business Strategy</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-indigo"></span>Customer Insight</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 py-6 rounded-lg bg-gradient-to-br from-indigo-50 to-violet-50 border border-indigo-100 flex flex-col items-center justify-center text-indigo-400">
+                        <i class="fas fa-university text-xl mb-2"></i>
+                        <span class="text-[10px] font-bold text-brand-indigo uppercase tracking-wider">PES University MBA</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Digital Analytics -->
+                <div class="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-violet-50 text-violet-700 rounded">03</span>
+                            <i class="fas fa-chart-line text-brand-violet text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 tracking-tight uppercase mb-3">Digital Analytics</h3>
+                        <ul class="text-[11px] text-slate-600 font-light space-y-2 border-t border-slate-100 pt-4">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span>BI & Forecasting</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span>Dashboard Design</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span>Data Storytelling</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 py-6 rounded-lg bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-100 flex flex-col items-center justify-center text-violet-400">
+                        <i class="fas fa-cubes text-xl mb-2"></i>
+                        <span class="text-[10px] font-bold text-brand-violet uppercase tracking-wider">KNIME & Tableau</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Market Perspective -->
+                <div class="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-slate-100 text-slate-700 rounded">04</span>
+                            <i class="fas fa-arrow-trend-up text-slate-700 text-lg"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 tracking-tight uppercase mb-3">Market Perspective</h3>
+                        <ul class="text-[11px] text-slate-600 font-light space-y-2 border-t border-slate-100 pt-4">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>Nifty Options</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>Trading Systems</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>Risk Management</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 py-6 rounded-lg bg-gradient-to-br from-slate-50 to-zinc-100 border border-slate-200 flex flex-col items-center justify-center text-slate-400">
+                        <i class="fas fa-shield-halved text-xl mb-2"></i>
+                        <span class="text-[10px] font-bold text-slate-700 uppercase tracking-wider">15 Yrs Market Practice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PROFESSIONAL JOURNEY -->
+    <section class="py-24 px-6 max-w-6xl mx-auto border-t border-slate-100">
+        <div class="text-center mb-16 reveal">
+            <span class="text-[10px] font-bold tracking-widest uppercase text-brand-blue">Evolution</span>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mt-2">Professional Journey</h2>
+            <p class="text-sm font-light text-slate-500 mt-3">The organic progression from visual craft to analytical and financial execution.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative reveal delay-100">
+            <!-- connecting line for desktop -->
+            <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-slate-200 -z-10 -translate-y-1/2"></div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 text-center flex flex-col justify-center items-center shadow-sm relative z-0">
+                <span class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold mb-4">1</span>
+                <h4 class="text-sm font-bold text-slate-900">Creative Design</h4>
+                <p class="text-[11px] text-slate-500 font-light mt-2 leading-relaxed">Light, composition & typography</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl p-6 text-center flex flex-col justify-center items-center shadow-sm relative z-0">
+                <span class="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs font-bold mb-4">2</span>
+                <h4 class="text-sm font-bold text-slate-900">Team Leadership</h4>
+                <p class="text-[11px] text-slate-500 font-light mt-2 leading-relaxed">Cross-functional production pipelines</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl p-6 text-center flex flex-col justify-center items-center shadow-sm relative z-0">
+                <span class="w-8 h-8 rounded-full bg-violet-50 text-violet-600 flex items-center justify-center text-xs font-bold mb-4">3</span>
+                <h4 class="text-sm font-bold text-slate-900">Business Analytics</h4>
+                <p class="text-[11px] text-slate-500 font-light mt-2 leading-relaxed">Data modeling & driver analysis</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl p-6 text-center flex flex-col justify-center items-center shadow-sm relative z-0">
+                <span class="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center text-xs font-bold mb-4">4</span>
+                <h4 class="text-sm font-bold text-slate-900">Digital Transformation</h4>
+                <p class="text-[11px] text-slate-500 font-light mt-2 leading-relaxed">Automated ETL, ARIMA & AI pipelines</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-xl p-6 text-center flex flex-col justify-center items-center shadow-sm relative z-0">
+                <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold mb-4">5</span>
+                <h4 class="text-sm font-bold text-slate-900">Financial Markets</h4>
+                <p class="text-[11px] text-slate-500 font-light mt-2 leading-relaxed">Quantitative trading & risk systems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CREATIVE WORK & EXPERIENCE -->
+    <section id="creative" class="py-24 px-6 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Creative Work Header -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-16 pb-6 border-b border-slate-200 reveal">
+                <div>
+                    <h3 class="text-[10px] font-bold tracking-widest uppercase text-brand-blue mb-2">Portfolio</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Creative Work</h2>
+                    <p class="text-slate-500 mt-2 font-light">18 years of motion graphics, brand design and photography.</p>
+                </div>
+                <a href="https://www.behance.net/VEERAMANI" target="_blank" class="mt-4 sm:mt-0 text-sm font-medium tracking-wide text-slate-500 hover:text-slate-900 transition-colors flex items-center">
+                    View on Behance </i><i class="fas fa-external-link-alt ml-2 text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Experience & Executive Summary Split -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 reveal delay-100">
+                
+                <!-- Left: Experience Timeline (5 Cols) -->
+                <div class="lg:col-span-5">
+                    <div class="flex items-center gap-2 mb-8">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
+                        <h3 class="text-[10px] font-bold tracking-widest uppercase text-slate-400">Experience</h3>
+                    </div>
+
+                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-2.5 before:h-full before:w-px before:bg-slate-200">
+                        
+                        <div class="relative flex items-start pl-8">
+                            <div class="absolute left-[5px] top-1.5 w-2 h-2 rounded-full bg-brand-blue"></div>
+                            <div>
+                                <span class="text-[11px] font-semibold text-brand-blue">2025 - Present</span>
+                                <h4 class="text-sm font-bold text-slate-900 mt-1">Freelancer</h4>
+                                <p class="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">Creative and motion design. Interior photography, branding, and AI-assisted content for tier-1 clients.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-start pl-8">
+                            <div class="absolute left-[5px] top-1.5 w-2 h-2 rounded-full bg-slate-400"></div>
+                            <div>
+                                <span class="text-[11px] font-semibold text-slate-400">2023 - 2024</span>
+                                <h4 class="text-sm font-bold text-slate-900 mt-1">Omnicom Media Group</h4>
+                                <p class="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">Manager, Creative Services. Led motion graphics teams and managed cross-functional post production.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-start pl-8">
+                            <div class="absolute left-[5px] top-1.5 w-2 h-2 rounded-full bg-slate-400"></div>
+                            <div>
+                                <span class="text-[11px] font-semibold text-slate-400">2018 - 2023</span>
+                                <h4 class="text-sm font-bold text-slate-900 mt-1">BYJU'S</h4>
+                                <p class="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">Assistant Manager. Supervised and delivered end-to-end production of over 23+ hours of premium educational video, optimising turnaround times.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-start pl-8">
+                            <div class="absolute left-[5px] top-1.5 w-2 h-2 rounded-full bg-slate-400"></div>
+                            <div>
+                                <span class="text-[11px] font-semibold text-slate-400">2007 - 2017</span>
+                                <h4 class="text-sm font-bold text-slate-900 mt-1">OnMobile Global</h4>
+                                <p class="text-xs text-slate-500 font-light mt-1.5 leading-relaxed">Senior Video & Graphic Designer. Developed campaigns and demonstration content for tier-1 telecom clients (Airtel, Vodafone) and created marketing brand collateral to enhance sales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Executive Summary (7 Cols) -->
+                <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-8 md:p-10 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-8">
+                            <span class="w-2 h-2 rounded-full bg-brand-violet"></span>
+                            <h3 class="text-[10px] font-bold tracking-widest uppercase text-slate-400">Executive Summary</h3>
+                        </div>
+                        <div class="space-y-5 text-slate-600 font-light text-sm leading-relaxed">
+                            <p class="text-base font-normal text-slate-800 leading-relaxed">
+                                Creative leader with over 18 years of experience, now focused on business analytics and strategic decision-making through an MBA and data-driven problem-solving.</p>
+                            <p>
+                                I have spent 18 years directing attention through light, composition, and visual hierarchy. Today, I apply the same discipline to financial data, transforming raw metrics into actionable insights for leadership teams.
+                            </p>
+                            <p>
+                                My production background informs my approach to data orchestration and governance, including managing complex pipelines, stakeholders, and deadlines to ensure accurate delivery. I now build automated forecasting pipelines in KNIME and Python and present results in streamlined Tableau dashboards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-100 mt-8 text-center">
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">18+</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Years Experience</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">23+ hrs</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Content Directed</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-brand-indigo">MBA</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">PES University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: BUSINESS ANALYTICS (DARK THEME) -->
+    <section id="business analytics" class="py-24 px-6 bg-slate-900 text-slate-300">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header -->
+            <div class="mb-14 reveal">
+                <span class="text-[10px] font-bold tracking-widest uppercase text-brand-blue">Strategy & Data</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mt-2">Business Analytics</h2>
+                <p class="text-base font-light text-slate-400 mt-4 max-w-2xl leading-relaxed">
+                    I build automated forecasting pipelines and executive dashboards that turn finance from a month-end report into a decision tool.
+                </p>
+            </div>
+
+            <!-- In Progress Banner -->
+            <div class="bg-slate-800 border border-brand-blue/30 rounded-lg p-6 mb-12 flex flex-col md:flex-row gap-6 items-start reveal">
+                <span class="px-3 py-1 bg-brand-blue text-white text-[10px] font-bold uppercase tracking-wider rounded shrink-0">In Progress</span>
+                <div>
+                    <h4 class="text-base font-semibold text-white mb-2">Taking this capstone further into BA and AI</h4>
+                    <p class="text-slate-400 font-light text-sm max-w-3xl leading-relaxed">The MBA project is the foundation, not the finish line. I am extending it with cloud data pipelines, live ERP data feeds and an AI assistant that answers finance questions in plain language.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-16 reveal">
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">KNIME</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">Python</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">SQL</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">Tableau</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">Power BI</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">ARIMA</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">NLP</span>
+                <span class="px-3 py-1.5 border border-slate-700 bg-slate-800 rounded text-xs font-medium text-slate-300">Data Governance</span>
+            </div>
+
+            <!-- Capstone 1: FP&A -->
+            <div class="reveal">
+                <h3 class="text-2xl font-bold text-white mb-3">MBA Second Capstone: Agile FP&A</h3>
+                <p class="text-slate-400 font-light leading-relaxed max-w-4xl mb-12 text-sm">
+                    Agile FP&A - Automating driver-based financial models. Submitted to PES University for the MBA in Business Analytics and Digital Transformation. Retail runs on 3 to 5% margins, so by the time a month-end report flags a cost spike, the window to react has closed. I built a system that flags it on day one and recommends the fix.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 border-y border-slate-800 py-10">
+                    <div>
+                        <p class="text-3xl font-bold text-white tracking-tighter">108K+</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">POS transactions processed</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white tracking-tighter">24</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Months of training history</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-rose-400 tracking-tighter">−$2.1M</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Deficit flagged instantly</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-emerald-400 tracking-tighter">+$485K</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Profit restored in simulation</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+                    <!-- Workflow Steps -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-8">How it works</h4>
+                        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-4 before:h-full before:w-0.5 before:bg-slate-800">
+                            
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-blue text-white font-bold text-xs z-10">1</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">Zero-touch ETL in KNIME</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Reads 108K+ POS rows, fills missing values automatically, and rolls everything into a lightweight monthly dataset so dashboards respond instantly.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-blue text-white font-bold text-xs z-10">2</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">Solve cold start (24 from 12)</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Only one year of actuals existed, so I shifted 2025 back 12 months and reduced it by 8% to create a prior-year baseline. The report flags this as synthetic.</div>
+                                </div>
+                            </div>
+
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-blue text-white font-bold text-xs z-10">3</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">ARIMA beat linear regression</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Linear regression scored R² 0.36 and missed the seasonal peaks and dips. ARIMA captured the retail cycle and gave a confidence range for the 2026 budget.</div>
+                                </div>
+                            </div>
+
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-blue text-white font-bold text-xs z-10">4</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">Tableau scenario planner</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Sliders for price, volume, COGS and discount. Costs split 80% variable and 20% fixed. A Goal Seek engine calculates the price move needed to break even.</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Charts -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-8">Model Output</h4>
+                        <div class="space-y-6">
+                            <!-- ARIMA Chart -->
+                            <div class="bg-slate-800 border border-slate-700 rounded-lg p-5">
+                                <svg viewBox="0 0 720 300" role="img" class="w-full h-auto">
+                                    <g font-size="12" fill="#64748b">
+                                        <line x1="56" x2="704" y1="216.4" y2="216.4" stroke="#475569" stroke-opacity="0.5"/>
+                                        <text x="50" y="220.4" text-anchor="end">$4M</text>
+                                        <line x1="56" x2="704" y1="170.9" y2="170.9" stroke="#475569" stroke-opacity="0.5"/>
+                                        <text x="50" y="174.9" text-anchor="end">$5M</text>
+                                        <line x1="56" x2="704" y1="125.3" y2="125.3" stroke="#475569" stroke-opacity="0.5"/>
+                                        <text x="50" y="129.3" text-anchor="end">$6M</text>
+                                        <line x1="56" x2="704" y1="79.8" y2="79.8" stroke="#475569" stroke-opacity="0.5"/>
+                                        <text x="50" y="83.8" text-anchor="end">$7M</text>
+                                        <line x1="56" x2="704" y1="34.2" y2="34.2" stroke="#475569" stroke-opacity="0.5"/>
+                                        <text x="50" y="38.2" text-anchor="end">$8M</text>
+                                        <text x="56.0" y="286" text-anchor="middle">Jan 2024</text>
+                                        <text x="278.2" y="286" text-anchor="middle">Jan 2025</text>
+                                        <text x="500.3" y="286" text-anchor="middle">Jan 2026</text>
+                                        <text x="704.0" y="286" text-anchor="middle">Dec 2026</text>
+                                    </g>
+                                    <line x1="491.1" x2="491.1" y1="16" y2="262" stroke="#94a3b8" stroke-dasharray="3 4"/>
+                                    <!-- Confidence Range -->
+                                    <polygon points="500.3,89.8 518.9,79.7 537.4,73.7 555.9,67.0 574.4,61.7 592.9,56.4 611.4,51.7 629.9,47.1 648.5,42.8 667.0,38.7 685.5,34.8 704.0,31.0 704.0,233.4 685.5,229.6 667.0,225.7 648.5,221.6 629.9,217.2 611.4,212.8 592.9,207.7 574.4,203.1 555.9,196.4 537.4,192.7 518.9,180.4 500.3,183.6" fill="#2563eb" opacity="0.3"/>
+                                    <!-- Actuals Line -->
+                                    <polyline points="56.0,191.9 74.5,206.9 93.0,164.9 111.5,156.1 130.1,175.4 148.6,173.5 167.1,187.3 185.6,176.2 204.1,197.3 222.6,141.4 241.1,168.6 259.7,144.7 278.2,173.9 296.7,190.2 315.2,144.6 333.7,135.0 352.2,156.0 370.7,154.0 389.3,168.9 407.8,156.8 426.3,179.8 444.8,119.1 463.3,148.6 481.8,122.6" fill="none" stroke="#ffffff" stroke-width="2"/>
+                                    <!-- Forecast Line -->
+                                    <polyline points="481.8,122.6 500.3,136.7 518.9,130.1 537.4,133.2 555.9,131.7 574.4,132.4 592.9,132.1 611.4,132.2 629.9,132.2 648.5,132.2 667.0,132.2 685.5,132.2 704.0,132.2" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="6 4"/>
+                                    <g font-size="10" fill="#cbd5e1">
+                                        <text x="74.5" y="28">Actuals (2024 synthetic baseline)</text>
+                                        <text x="507.7" y="25.1" fill="#60a5fa">ARIMA forecast, 95% range</text>
+                                    </g>
+                                </svg>
+                                <p class="text-[11px] text-slate-500 mt-4 text-center">Monthly net sales from the model files, with the 2026 ARIMA forecast.</p>
+                            </div>
+
+                            <!-- Margin Chart -->
+                            <div class="bg-slate-800 border border-slate-700 rounded-lg p-5">
+                                <svg viewBox="0 0 720 300" role="img" font-size="12" class="w-full h-auto">
+                                    <text x="118" y="24" text-anchor="end" fill="#f8fafc">Grocery</text>
+                                    <rect x="126" y="10" width="330" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="462" y="24" fill="#f8fafc">30.5% of sales</text>
+                                    <text x="700" y="24" text-anchor="end" fill="#64748b">margin 10.0%</text>
+                                    
+                                    <text x="118" y="52" text-anchor="end" fill="#f8fafc">Staples</text>
+                                    <rect x="126" y="38" width="290" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="422" y="52" fill="#f8fafc">26.7% of sales</text>
+                                    <text x="700" y="52" text-anchor="end" fill="#64748b">margin 8.0%</text>
+                                    
+                                    <text x="118" y="80" text-anchor="end" fill="#f8fafc">Cleaning</text>
+                                    <rect x="126" y="66" width="87" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="219" y="80" fill="#f8fafc">8.1% of sales</text>
+                                    <text x="700" y="80" text-anchor="end" fill="#3b82f6">margin 18.0%</text>
+                                    
+                                    <text x="118" y="108" text-anchor="end" fill="#f8fafc">Personal Care</text>
+                                    <rect x="126" y="94" width="71" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="203" y="108" fill="#f8fafc">6.6% of sales</text>
+                                    <text x="700" y="108" text-anchor="end" fill="#3b82f6">margin 20.0%</text>
+                                    
+                                    <text x="118" y="136" text-anchor="end" fill="#f8fafc">Dairy</text>
+                                    <rect x="126" y="122" width="68" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="200" y="136" fill="#f8fafc">6.2% of sales</text>
+                                    <text x="700" y="136" text-anchor="end" fill="#64748b">margin 9.0%</text>
+                                    
+                                    <text x="118" y="164" text-anchor="end" fill="#f8fafc">Health & Well</text>
+                                    <rect x="126" y="150" width="56" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="188" y="164" fill="#f8fafc">5.2% of sales</text>
+                                    <text x="700" y="164" text-anchor="end" fill="#3b82f6">margin 20.1%</text>
+                                    
+                                    <text x="118" y="192" text-anchor="end" fill="#f8fafc">Baby Care</text>
+                                    <rect x="126" y="178" width="48" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="180" y="192" fill="#f8fafc">4.5% of sales</text>
+                                    <text x="700" y="192" text-anchor="end" fill="#64748b">margin 14.0%</text>
+                                    
+                                    <text x="118" y="220" text-anchor="end" fill="#f8fafc">Beverages</text>
+                                    <rect x="126" y="206" width="43" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="175" y="220" fill="#f8fafc">4.0% of sales</text>
+                                    <text x="700" y="220" text-anchor="end" fill="#64748b">margin 15.0%</text>
+                                    
+                                    <text x="118" y="248" text-anchor="end" fill="#f8fafc">Snacks</text>
+                                    <rect x="126" y="234" width="26" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="158" y="248" fill="#f8fafc">2.4% of sales</text>
+                                    <text x="700" y="248" text-anchor="end" fill="#64748b">margin 18.0%</text>
+                                    
+                                    <text x="118" y="276" text-anchor="end" fill="#f8fafc">Fruits & Veg</text>
+                                    <rect x="126" y="262" width="25" height="18" rx="2" fill="#2563eb"/>
+                                    <text x="157" y="276" fill="#f8fafc">2.3% of sales</text>
+                                    <text x="700" y="276" text-anchor="end" fill="#64748b">margin 12.0%</text>
+                                </svg>
+                                <p class="text-[11px] text-slate-500 mt-4 text-center">Top categories by share of 2025 net sales, with profit margin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elasticity Paradox -->
+                <div class="mb-16">
+                    <h4 class="text-lg font-semibold text-white mb-3">Key finding: the elasticity paradox</h4>
+                    <p class="text-slate-400 font-light leading-relaxed max-w-4xl mb-8 text-sm">
+                        The Goal Seek engine first suggested a 1.7% price rise. But raising prices also cuts demand (modelled at −0.5x), so a 1.7% rise would not have closed the gap. Break-even needed <strong class="text-white font-medium">2.5%</strong>. A model that ignores elasticity would have missed the profit target.
+                    </p>
+                    
+                    <div class="bg-slate-800 border border-slate-700 rounded-lg p-8 max-w-4xl mx-auto mb-8">
+                        <svg viewBox="0 0 720 220" role="img" class="w-full h-auto text-[13px]">
+                            <line x1="60" x2="700" y1="110" y2="110" stroke="#475569" stroke-opacity="0.5"/>
+                            <rect x="130" y="110" width="150" height="88" fill="#ef4444"/>
+                            <text x="205" y="212" text-anchor="middle" fill="#f8fafc">Cost shock: −$2,109,413</text>
+                            <rect x="420" y="86" width="150" height="24" fill="#10b981"/>
+                            <text x="495" y="76" text-anchor="middle" fill="#f8fafc">+2.5% price: +$485,144</text>
+                            <text x="205" y="100" text-anchor="middle" fill="#64748b">before</text>
+                            <text x="495" y="130" text-anchor="middle" fill="#64748b">after</text>
+                        </svg>
+                        <p class="text-[11px] text-slate-500 mt-4 text-center">Simulated profit variance before and after the elasticity-adjusted price increase.</p>
+                    </div>
+
+                    <p class="text-slate-400 font-light leading-relaxed max-w-4xl text-sm">
+                        <strong class="text-white font-medium">Recommendations I made:</strong> replace static annual budgets with rolling 12-month forecasts, check every price change in the planner before it goes live, and use it in the monthly Sales and Operations meeting so finance, supply chain and marketing plan together.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Roadmap -->
+            <div class="mb-20 reveal border-t border-slate-800 pt-16">
+                <h3 class="text-xl font-bold text-white mb-8">Next: BA and AI roadmap</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <span class="text-brand-blue font-bold text-[10px] uppercase tracking-wider mb-2 block">Step 1</span>
+                        <h4 class="text-sm font-semibold text-white mb-2">Move to the cloud</h4>
+                        <p class="text-xs font-light text-slate-400 leading-relaxed">Run the KNIME workflows on Microsoft Azure data lakes for scalable, scheduled processing.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <span class="text-brand-blue font-bold text-[10px] uppercase tracking-wider mb-2 block">Step 2</span>
+                        <h4 class="text-sm font-semibold text-white mb-2">Live ERP data</h4>
+                        <p class="text-xs font-light text-slate-400 leading-relaxed">Replace CSV files with API feeds so forecasts update as sales happen.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <span class="text-brand-blue font-bold text-[10px] uppercase tracking-wider mb-2 block">Step 3</span>
+                        <h4 class="text-sm font-semibold text-white mb-2">Conversational AI CFO</h4>
+                        <p class="text-xs font-light text-slate-400 leading-relaxed">Add an AI assistant to the dashboard so leaders can ask “what happens if costs rise 5%?” and get an answer.</p>
+                    </div>
+                </div>
+                <div class="mt-8 p-4 bg-slate-800/30 border border-slate-800 rounded text-center">
+                    <p class="text-[10px] text-slate-500 font-light">Data note: the retail data is a public FMCG point-of-sale dataset used as a stand-in for a mid-sized retailer, and the 2024 history is synthetic. Figures come from my capstone simulation, not a live business.</p>
+                </div>
+            </div>
+
+            <!-- Capstone 2 -->
+            <div class="reveal border-t border-slate-800 pt-16 pb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">MBA First Capstone: Consumer Sentiment Analysis</h3>
+                <p class="text-slate-400 font-light leading-relaxed max-w-4xl mb-10 text-sm">
+                    A project on Amazon India electronics reviews extracting intelligence from unstructured textual data. We built a no-code NLP pipeline in KNIME using the Hu & Liu opinion lexicon alongside Naïve Bayes and Logistic Regression models. By democratizing this data through Power BI and Tableau, we turned raw customer voices into real-time operational insights.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 border-y border-slate-800 py-10">
+                    <div>
+                        <p class="text-3xl font-bold text-white tracking-tighter">5,000</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Electronics reviews processed</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white tracking-tighter">84%</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Optimized Model Accuracy</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-rose-400 tracking-tighter">100% Bias</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Initial blindspot (fixed)</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-emerald-400 tracking-tighter">0 to 0.73</p>
+                        <p class="text-xs font-light text-slate-400 mt-1">Negative recall improvement</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12">
+                    <!-- Workflow Steps -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-8">Methodology & NLP Pipeline</h4>
+                        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-4 before:h-full before:w-0.5 before:bg-slate-800">
+                            
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-violet text-white font-bold text-xs z-10">1</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">Text Preprocessing in KNIME</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Cleaned unstructured text using lowercasing, punctuation removal, stop-word filtering, tokenization, and lemmatization to prepare for machine learning.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-violet text-white font-bold text-xs z-10">2</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">Lexicon & Supervised Learning</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Applied Hu & Liu's sentiment lexicons for explainable scoring, alongside Naïve Bayes and Logistic Regression algorithms for sentiment classification.</div>
+                                </div>
+                            </div>
+
+                            <div class="relative flex items-start group">
+                                <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 border-slate-900 bg-brand-violet text-white font-bold text-xs z-10">3</div>
+                                <div class="ml-5 w-full">
+                                    <div class="font-medium text-white text-sm">Fixing the 100% Positivity Bias</div>
+                                    <div class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">The initial model had 94% accuracy but ignored negative reviews entirely (Cohen's Kappa of 0.0). Applied SMOTE oversampling and macro-averaged F1 evaluation to correctly detect minority negative sentiments.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Insights -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-8">Key Findings & Insights</h4>
+                        <div class="space-y-6">
+                            <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                                <h5 class="text-sm font-semibold text-white mb-2"><i class="fas fa-search text-brand-violet mr-2"></i>Keyword & Root Cause Extraction</h5>
+                                <p class="text-xs text-slate-400 font-light leading-relaxed">Positive reviews highlighted product reliability and value (e.g., "easy", "perfect"). Negative lexicon extraction successfully isolated operational pain points like poor durability ("slow", "useless") and customer support issues ("return", "respond").</p>
+                            </div>
+                            
+                            <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                                <h5 class="text-sm font-semibold text-white mb-2"><i class="fas fa-shield-alt text-brand-violet mr-2"></i>Verified Purchase Polarization</h5>
+                                <p class="text-xs text-slate-400 font-light leading-relaxed">Analysis revealed that "Verified Purchases" (85% of the dataset) were significantly more polarized, showing more extreme positive and negative emotional expressions compared to non-verified reviews which clustered around neutral.</p>
+                            </div>
+
+                            <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                                <h5 class="text-sm font-semibold text-white mb-2"><i class="fas fa-chart-line text-brand-violet mr-2"></i>Time-Series Sentiment Trends</h5>
+                                <p class="text-xs text-slate-400 font-light leading-relaxed">Detected a 12% spike in negative sentiment during holiday sale weeks, and a 10% dip correlating with a product recall, proving that sentiment tracking can preempt consumer backlash.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Business Implication Banner -->
+                <div class="bg-indigo-900/20 border border-brand-violet/30 rounded-xl p-6 mt-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-brand-violet text-white flex items-center justify-center shrink-0 text-sm font-bold mt-0.5">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white mb-1">Business Implication</h4>
+                            <p class="text-xs text-slate-400 font-light leading-relaxed">
+                                Relying on raw accuracy on an imbalanced dataset creates a false perception of customer satisfaction. By retraining the model to detect negative feedback (improving negative recall to 0.73), the business can now intervene on support, product quality, and delivery issues. <em class="text-slate-300">"Only when a model can listen to all voices—not just the happy ones—can it truly drive customer-centric innovation."</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- SECTION 6: MARKET PERSPECTIVE (TRADING) -->
+    <section id="finance" class="py-24 px-6 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-14 reveal">
+                <span class="text-[10px] font-bold tracking-widest uppercase text-brand-violet">Quantitative Practice</span>
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 mt-2">Market Perspective</h2>
+                <p class="text-sm font-light text-slate-500 mt-3 max-w-2xl leading-relaxed">
+                    Intraday Nifty option-selling framework (Enter 9:17, Exit 15:15, 1 lot). Built on statistical probability, disciplined risk limits, and strict drawdown management.
+                </p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 reveal delay-100">
+                <div class="bg-white p-6 rounded-xl border border-slate-100 text-center shadow-sm">
+                    <p class="text-3xl font-bold text-slate-900 tracking-tight">270 Days</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2">Backtest Sample</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 text-center shadow-sm">
+                    <p class="text-3xl font-bold text-slate-900 tracking-tight">65%</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2">Win Rate</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 text-center shadow-sm">
+                    <p class="text-3xl font-bold text-slate-900 tracking-tight">₹14.9K</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2">Max Drawdown</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-emerald-100 text-center shadow-sm">
+                    <p class="text-3xl font-bold text-emerald-600 tracking-tight">Live</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2">Forward Testing</p>
+                </div>
+            </div>
+
+            <!-- Equity Curve / Performance Graph -->
+            <div class="bg-white rounded-2xl border border-slate-100 p-6 md:p-10 mb-8 shadow-sm reveal">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-8 gap-3">
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900">Cumulative Strategy Equity Curve</h3>
+                        <p class="text-xs text-slate-500 font-light mt-1">Aug 2025 – Sep 2026 backtest performance (1 Lot Nifty Straddle/Strangle framework)</p>
+                    </div>
+                    <div class="text-[10px] font-medium px-3 py-1 bg-violet-50 text-brand-violet rounded-full shrink-0">
+                        Risk Management > Win Rate
+                    </div>
+                </div>
+
+                <div class="w-full overflow-hidden">
+                    <svg viewBox="0 0 720 220" role="img" class="w-full h-auto">
+                        <!-- Horizontal Grid Lines -->
+                        <line x1="50" x2="690" y1="180" y2="180" stroke="#f1f5f9"/>
+                        <line x1="50" x2="690" y1="130" y2="130" stroke="#f1f5f9"/>
+                        <line x1="50" x2="690" y1="80" y2="80" stroke="#f1f5f9"/>
+                        <line x1="50" x2="690" y1="30" y2="30" stroke="#f1f5f9"/>
+                        
+                        <!-- Y-Axis Labels -->
+                        <text x="45" y="184" font-size="11" fill="#94a3b8" text-anchor="end">₹0</text>
+                        <text x="45" y="134" font-size="11" fill="#94a3b8" text-anchor="end">₹40K</text>
+                        <text x="45" y="84" font-size="11" fill="#94a3b8" text-anchor="end">₹80K</text>
+                        <text x="45" y="34" font-size="11" fill="#94a3b8" text-anchor="end">₹120K</text>
+
+                        <!-- Equity Area Shading -->
+                        <polygon points="50,180 90,172 130,165 170,168 210,150 250,138 290,144 330,126 370,110 410,116 450,94 490,78 530,85 570,62 610,50 650,42 690,30 690,180 50,180" fill="url(#violetGradient)" opacity="0.25"/>
+
+                        <defs>
+                            <linearGradient id="violetGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#7c3aed"/>
+                                <stop offset="100%" stop-color="#ffffff"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Equity Polyline -->
+                        <polyline points="50,180 90,172 130,165 170,168 210,150 250,138 290,144 330,126 370,110 410,116 450,94 490,78 530,85 570,62 610,50 650,42 690,30" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                        <!-- Timeline milestones -->
+                        <text x="50" y="202" font-size="11" fill="#94a3b8">Aug '25</text>
+                        <text x="210" y="202" font-size="11" fill="#94a3b8">Nov '25</text>
+                        <text x="370" y="202" font-size="11" fill="#94a3b8">Feb '26</text>
+                        <text x="530" y="202" font-size="11" fill="#94a3b8">May '26</text>
+                        <text x="690" y="202" font-size="11" fill="#94a3b8" text-anchor="end">Sep '26</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <p class="text-[10px] text-slate-400 font-light text-center max-w-2xl mx-auto mb-16">
+                * Note: Backtest results are simulated for educational evaluation and do not represent guaranteed future performance. Options trading involves capital risk.
+            </p>
+
+            <!-- Forward Test -->
+            <div class="reveal">
+                <h3 class="text-lg font-bold text-slate-900 mb-3">Forward test</h3>
+                <p class="text-sm font-light text-slate-600 leading-relaxed max-w-4xl">
+                    Running live since 15 Oct 2026. After 20 trades the result is positive, but that is too short to prove anything. I will update this page as the record grows.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT FOOTER -->
+    <footer id="contact" class="py-10 px-6 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-medium text-slate-400">
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Veeramani A. All rights reserved.</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <a href="mailto:veera292003@yahoo.co.in" class="hover:text-slate-900 flex items-center gap-2 transition-colors">
+                    <i class="far fa-envelope text-sm"></i>
+                    <span>veera292003@yahoo.co.in</span>
+                </a>
+                <a href="tel:+919886747598" class="hover:text-slate-900 flex items-center gap-2 transition-colors">
+                    <i class="fab fa-whatsapp text-sm text-emerald-600"></i>
+                    <span>+91 98867 47598</span>
+                </a>
+                <a href="https://www.linkedin.com/in/veeramani-a-25909663/" target="_blank" class="hover:text-brand-blue flex items-center gap-2 transition-colors">
+                    <i class="fab fa-linkedin text-sm"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.behance.net/VEERAMANI" target="_blank" class="hover:text-slate-900 flex items-center gap-2 transition-colors">
+                    <i class="fab fa-behance text-sm"></i>
+                    <span>Behance</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scroll Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
